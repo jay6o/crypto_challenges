@@ -1,0 +1,26 @@
+{
+  "name": "cryptopals_challenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./set1",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jay6o/cryptopals_challenges.git"
+  },
+  "keywords": [
+    "Crypto",
+    "Cryptography"
+  ],
+  "author": "jay6o",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jay6o/cryptopals_challenges/issues"
+  },
+  "homepage": "https://github.com/jay6o/cryptopals_challenges#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
