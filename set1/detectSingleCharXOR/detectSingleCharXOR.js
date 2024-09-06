@@ -5,7 +5,7 @@ const Frequencies = require("../singleByteXORCipher/helpers/frequenciesObject.js
 const fs = require("fs");
 const readline = require("node:readline");
 
-detectSingleCharXOR = async (englishBook, encryptedFile) => {
+const detectSingleCharXOR = async (englishBook, encryptedFile) => {
 	const bookCharFrequencies = getBookCharacterFrequencies(englishBook);
 	const encryptedList = fs.createReadStream(encryptedFile, "utf8");
 	const rl = readline.createInterface({ input: encryptedList, crlfDelay: Infinity });
