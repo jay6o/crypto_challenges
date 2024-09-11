@@ -2,6 +2,11 @@ const Frequencies = require("./frequenciesObject.js");
 const getBookCharacterFrequencies = require("./getBookCharacterFrequencies.js");
 const getMessageCharacterFrequencies = require("./getMessageCharacterFrequencies.js");
 
+/**
+ * 	Scores English by calculating sum of differences between the textToScore and the English texts frequencies.
+ * 
+ * 	@returns The English score of the textToScore
+ */
 scoreEnglish = (textToScore, bookFrequencies) => {
 	let score = 0;
 	const messageFrequencies = getMessageCharacterFrequencies(textToScore);

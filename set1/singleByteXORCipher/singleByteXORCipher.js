@@ -2,6 +2,12 @@ const { Buffer } = require("node:buffer");
 const getBookCharacterFrequencies = require("./helpers/getBookCharacterFrequencies.js");
 const scoreEnglish = require("./helpers/scoreEnglish.js");
 
+/**
+ *	Cracks an encrypted message that uses single-byte XOR.
+ * 	
+ * 	@param hex1 The hex encoded message to decrypt.
+ * 	@param key The key to attempt to crack the message with.
+ */
 singleByteXORCipher = (hex1, key) => {
 	const inputBuffer = Buffer.from(hex1, 'hex');
 	const keyBuffer = Buffer.from(key.toString(10));
@@ -12,6 +18,12 @@ singleByteXORCipher = (hex1, key) => {
 	return result.toString('utf8');
 }
 
+
+/**
+ * 	Main method.
+ * 
+ * 	@param encoded The encoded message.
+ */
 main = (encoded) => {
 	let possible = [];
 	const bookCharacterFrequencies = getBookCharacterFrequencies("./assets/The_Odyssey.txt");

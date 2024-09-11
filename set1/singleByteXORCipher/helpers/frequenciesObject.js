@@ -1,3 +1,6 @@
+/**
+ * 	Character frequencies object used for scoring English.
+ */
 class Frequencies {
 	constructor() {
 		this.self = {

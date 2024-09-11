@@ -1,6 +1,12 @@
 const fs = require("fs");
 const Frequencies = require("./frequenciesObject.js");
 
+/**
+ * 	Helper method that initializes and returns the character frequencies of a text.
+ * 
+ * 	@param book The text to generate the frequencies for
+ * 	@returns The frequencies object
+ */
 getBookCharacterFrequencies = (book) => {
 	let frequencies = new Frequencies();
 	let chars = 0;

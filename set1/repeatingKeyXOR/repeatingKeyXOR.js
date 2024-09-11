@@ -1,3 +1,10 @@
+/**
+ * 	Encrypts a string by using a single key and repeating-key XOR.
+ * 
+ * 	@param input The message to encrypt
+ * 	@param key The key to implement repeating-key XOR with
+ * 	@returns The encrypted message
+ */
 repeatingKeyXOR = (input, key) => {
 	const inputBuffer = Buffer.from(input, "utf8");
 	const keyBuffer = Buffer.from(key, "utf8");

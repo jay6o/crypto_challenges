@@ -5,6 +5,12 @@ const Frequencies = require("../singleByteXORCipher/helpers/frequenciesObject.js
 const fs = require("fs");
 const readline = require("node:readline");
 
+/**
+ * 	Can detect the decrypted message in a list of single-character (byte) XOR encrypted messages.
+ * 
+ * @param englishBook The English book to use as the baseline score to compare with
+ * @param encryptedFile The list of encrypted messages to try and decrypt
+ */
 const detectSingleCharXOR = async (englishBook, encryptedFile) => {
 	const bookCharFrequencies = getBookCharacterFrequencies(englishBook);
 	const encryptedList = fs.createReadStream(encryptedFile, "utf8");
